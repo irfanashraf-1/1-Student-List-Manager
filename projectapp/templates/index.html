@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="{% url 'Savedata' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="field">
+                <label>Full name</label>
+                <div class="">
+                    <input name="fullname" type="text"/>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>class</label>
+                <div class="">
+                    <input name="grade" type="text"/>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>phone number</label>
+                <div class="">
+                    <input name="phone_number" type=""/>
+                </div>
+            </div>
+
+            <button type="submit">submit</button>
+        </form>
+    </body>
+</html>
